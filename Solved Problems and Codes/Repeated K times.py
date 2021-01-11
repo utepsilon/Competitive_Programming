@@ -1,0 +1,43 @@
+n = int(input())
+arr = [int(x) for x in input().split()]
+k = int(input())
+dic = {}
+for i in arr:
+    if i in dic.keys():
+        dic[i] += 1
+    else:
+        dic[i]=1;
+
+for i,j in sorted(dic.items()):
+    if j ==k:
+        print(i)
+        break
+
+ 
+"""Given a List of N number a1,a2,a3........an, You have to find smallest number from the List that is repeated in the List exactly K number of times.
+
+Input Format
+
+First Line of Input Contain Single Value N, Size of List
+Second Line of Input Contain N Space Separated Integers
+Third Line of Input Contain Single Value K
+
+Output Format
+
+Smallest Integer Value That is Repeated Exactly K Number of Time
+
+Constraints
+
+0 < N < 100001
+0 <= K < 100001
+0 <= ai < 100001
+NOTE
+There Will Be Atleast One Variable Which Is Repeated K Times
+
+SAMPLE INPUT 
+5
+2 2 1 3 1
+2
+SAMPLE OUTPUT 
+1
+"""
